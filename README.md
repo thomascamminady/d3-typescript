@@ -1,5 +1,8 @@
 # Minimal D3 and Typescript Project
 
+
+https://github.com/jonasoesch/d3-typescript
+
 This is a minimal project to let you start coding with D3 in Typescript and build up from the bottom.
 Don't hesitate to take a look at the configuration files:
 

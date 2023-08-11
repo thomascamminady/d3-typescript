@@ -14,14 +14,16 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.ts', '.js' ]
+    extensions: ['.ts', '.js']
   },
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-     contentBase: './static'
+    static: {
+      directory: './static'
+    }
   },
 };
 

@@ -1,35 +1,9 @@
-import * as d3 from "d3";
-
-let l = console.log
-
-interface Data {
-    x: number;
-    y: number;
-}
+// import * as d3 from "d3";
 
 
-d3.csv("data.csv").then((csv: any) => {
-    let data = csv.map((d) => {
-        return {
-            x: parseInt(d.x),
-            y: parseInt(d.y)
-        }
-    } )
+import { drawChart1 } from './charts/chart1';
+import { drawChart2 } from './charts/chart2';
 
-draw(data)
-    
-}, (fail) => l(fail))
+drawChart1();
+drawChart2();
 
-
-function draw(data:Data[]) {
-    let chart = d3.select("#container")
-        .append("svg")
-    
-    const h:number = 300
-    const w:number = 700
-
-    chart
-        .attr("width", w)
-        .attr("height", h)
-
-}

@@ -1,42 +1,79 @@
-body {
-    background-color: #F2F2F2;
-}
-h1 {
-    text-align: center;
-    font-size: 30px;
-    font-family: "Avenir, Helvetica Neue, Arial, sans-serif";
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #000;
-    margin-bottom: 40px;
-    margin-top: 160px;
+/* Imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Variables */
+:root {
+    --main-font-color: #555;
+    --secondary-font-color: #888;
+    --main-bg-color: #ffffff;
+    --main-font-size: 18px;
+    --heading-font-size: 36px;
+    --secondary-font-size: 22px;
+    --main-margin: 25px;
+    --main-padding: 25px;
 }
 
-#container {
-    max-width: 800px;
+/* Basic Resets and global styles */
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--main-font-color);
+    margin: 0;
+    padding: 0;
+    font-size: var(--main-font-size);
+    line-height: 28px;
+}
+
+/* Headers */
+h1 {
+    text-align: center;
+    font-size: var(--heading-font-size);
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 150px;
+}
+
+/* Article Styles */
+article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: var(--main-margin);
+    max-width: 1600px;
     margin: 0 auto;
+    padding: var(--main-padding);
+    background-color: var(--main-bg-color);
+    border-radius: 8px;
+}
+
+.text-content {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart {
+    grid-column: 1 / -1;
+    margin: var(--main-margin) 0;
 }
 
 .author {
-    font: 20px "Adobe Text Pro, Times New Roman, Georgia, serif";
+    font-size: var(--secondary-font-size);
     text-align: center;
-    margin-bottom: 140px;
+    margin-bottom: var(--main-margin);
+    font-weight: 400;
+    color: var(--secondary-font-color);
     font-style: italic;
 }
 
-.smallcaps {
-    font-variant-caps: small-caps;
-    -moz-font-feature-settings: "smcp";
-    -webkit-font-feature-settings: "smcp";
-    font-feature-settings: "smcp";
-    font-style: normal;
-}
-
-article {
-    margin: 40px auto;
-    max-width: 800px;
-    font: 16px/24px "Avenir, Helvetica Neue, Arial, sans-serif";
-    font-weight: Regular;
-    color: #444;
+.date {
+    position: absolute;
+    top: var(--main-padding);
+    right: var(--main-padding);
+    font-size: var(--secondary-font-size);
+    color: var(--secondary-font-color);
 }
