@@ -4,12 +4,13 @@
 
 /* Variables */
 :root {
-    --main-font-color: #555;
-    --secondary-font-color: #888;
+    --main-font-color: #333;
+    --secondary-font-color: #444;
     --main-bg-color: #ffffff;
     --main-font-size: 18px;
     --heading-font-size: 36px;
     --secondary-font-size: 22px;
+    --tick-font-size: 14px;
     --main-margin: 25px;
     --main-padding: 25px;
 }
@@ -39,9 +40,9 @@ h1 {
 article {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: var(--main-margin);
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: var(--main-padding);
     background-color: var(--main-bg-color);
@@ -54,11 +55,14 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: justify;
+    /* Justify the text alignment */
+
 }
 
 .chart {
     grid-column: 1 / -1;
-    margin: var(--main-margin) 0;
+    margin: var(--main-margin) 10;
 }
 
 .author {
