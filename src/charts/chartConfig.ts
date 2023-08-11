@@ -20,6 +20,12 @@ export const defaultChartConfig = {
     mainPadding: "var(--main-padding)"   // Added from CSS variables
 };
 
+export const barChartConfig = {
+    ...defaultChartConfig, // Use the default configurations as a base
+    barColor: "#67A8E7", // Base bar color
+    barHoverColor: "#507DBC" // Darker bar color for hover
+};
+
 export function addStyledAxis(svg, x, y, config) {
 
 
